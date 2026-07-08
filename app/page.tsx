@@ -237,13 +237,12 @@ export default function Home() {
         // Apply full-bleed watermark
         if (wmImg && wmImg.naturalWidth > 0) {
           const isInverted = invertedPages[i];
+          targetCtx.save();
           if (isInverted) {
             targetCtx.filter = 'invert(1)';
           }
           targetCtx.drawImage(wmImg, 0, 0, targetWidth, targetHeight);
-          if (isInverted) {
-            targetCtx.filter = 'none';
-          }
+          targetCtx.restore();
         } else {
           throw new Error(`Watermark image failed to render on page ${i}. Please verify the watermark asset.`);
         }

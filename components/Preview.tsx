@@ -168,13 +168,12 @@ export default function Preview({
       const wmImg = watermarkImageRef.current;
       if (wmImg && wmImg.naturalWidth > 0) {
         const isInverted = invertedPages[currentPage];
+        afterCtx.save();
         if (isInverted) {
           afterCtx.filter = 'invert(1)';
         }
         afterCtx.drawImage(wmImg, 0, 0, 800, 1000);
-        if (isInverted) {
-          afterCtx.filter = 'none';
-        }
+        afterCtx.restore();
       } else if (watermarkUrl) {
         toast.error('Watermark asset failed to load in preview.');
       }
