@@ -417,22 +417,6 @@ export default function Home() {
                     </button>
                   </div>
                 </div>
-
-                {/* Quality */}
-                <div className="space-y-1.5">
-                  <div className="flex items-center justify-between text-xs font-bold text-slate-400">
-                    <span>WebP Compression Quality</span>
-                    <span className="text-blue-500">{settings.quality}%</span>
-                  </div>
-                  <input
-                    type="range"
-                    min="10"
-                    max="100"
-                    value={settings.quality}
-                    onChange={(e) => setSettings((s) => ({ ...s, quality: parseInt(e.target.value) }))}
-                    className="w-full h-1.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-blue-600"
-                  />
-                </div>
               </div>
             </div>
 
