@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+body {
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Custom fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Custom slow-spin for sun icon */
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+
+/* Light contrast checkerboard background for transparent previews */
+.checkerboard-bg {
+  background-color: #ffffff !important;
+  background-image: linear-gradient(45deg, #cbd5e1 25%, transparent 25%),
+    linear-gradient(-45deg, #cbd5e1 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #cbd5e1 75%),
+    linear-gradient(-45deg, transparent 75%, #cbd5e1 75%) !important;
+  background-size: 8px 8px !important;
+  background-position: 0 0, 0 4px, 4px -4px, -4px 0px !important;
+}
