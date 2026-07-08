@@ -15,16 +15,16 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AuraMark | Professional PDF Watermarking Platform",
+  title: "WebStory Watermark | Professional PDF Watermarking Platform",
   description: "Upload your PDFs, apply custom watermarks, and export high-quality WebP images in standard 4:5 aspect ratio instantly.",
   openGraph: {
-    title: "AuraMark - Professional PDF Watermark Utility",
+    title: "WebStory Watermark - Professional PDF Watermark Utility",
     description: "Convert pages of any PDF into beautiful 4:5 WebP images watermarked with your brand logo.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "AuraMark - Professional PDF Watermark Utility",
+    title: "WebStory Watermark - Professional PDF Watermark Utility",
     description: "Convert pages of any PDF into beautiful 4:5 WebP images watermarked with your brand logo.",
   }
 };
