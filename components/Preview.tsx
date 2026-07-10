@@ -11,8 +11,8 @@ import {
   Move,
   Contrast
 } from 'lucide-react';
-import * as pdfjsLib from 'pdfjs-dist';
-pdfjsLib.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjsLib.version}/build/pdf.worker.min.mjs`;
+import * as pdfjsLib from 'pdfjs-dist/legacy/build/pdf.mjs';
+pdfjsLib.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjsLib.version}/legacy/build/pdf.worker.min.mjs`;
 import toast from 'react-hot-toast';
 
 interface PreviewProps {

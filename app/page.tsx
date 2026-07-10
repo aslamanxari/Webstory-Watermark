@@ -147,8 +147,8 @@ export default function Home() {
 
     try {
       const arrayBuffer = await pdfFile.arrayBuffer();
-      const pdfjsLib = await import('pdfjs-dist');
-      pdfjsLib.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjsLib.version}/build/pdf.worker.min.mjs`;
+      const pdfjsLib = await import('pdfjs-dist/legacy/build/pdf.mjs');
+      pdfjsLib.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjsLib.version}/legacy/build/pdf.worker.min.mjs`;
 
       const pdf = await pdfjsLib.getDocument({
         data: new Uint8Array(arrayBuffer),

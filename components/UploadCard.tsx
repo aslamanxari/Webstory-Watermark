@@ -7,8 +7,8 @@ import { FileText, Image as ImageIcon, X, UploadCloud } from 'lucide-react';
 import toast from 'react-hot-toast';
 
 // Configure pdf.js worker globally on the client side
-import * as pdfjsLib from 'pdfjs-dist';
-pdfjsLib.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjsLib.version}/build/pdf.worker.min.mjs`;
+import * as pdfjsLib from 'pdfjs-dist/legacy/build/pdf.mjs';
+pdfjsLib.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjsLib.version}/legacy/build/pdf.worker.min.mjs`;
 
 // Helper to format bytes
 const formatBytes = (bytes: number, decimals = 2) => {
